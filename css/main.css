@@ -120,9 +120,15 @@ body {
 }
 
 .collapse-switch {
-    position: relative;
-    height: 100%;
-    width: 100%;
+    height: 7px !important;
+    width: 7px !important;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.Treant .collapsed .collapse-switch{
+    background: #ff6d5e;
 }
 
 #tai-map-tree {
