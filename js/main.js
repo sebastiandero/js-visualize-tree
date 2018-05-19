@@ -17,4 +17,6 @@ const tree_chart_conf = {
     nodeStructure: data
 }
 
-let tree_chart = new Treant(tree_chart_conf);
+$(function () {
+    let tree_chart = new Treant(tree_chart_conf);
+});
