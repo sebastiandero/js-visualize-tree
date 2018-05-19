@@ -117,18 +117,30 @@ body {
     border-radius: 10px;
 
     padding: 0 10px;
+    border: #000000 solid 1px;
+    border-collapse: collapse;
 }
 
 .collapse-switch {
-    height: 7px !important;
-    width: 7px !important;
+    height: 10px !important;
+    width: 10px !important;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
+    border-collapse: collapse;
+    margin: 5px;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
 }
 
 .Treant .collapsed .collapse-switch{
     background: #ff6d5e;
+}
+
+.Treant .collapse-switch{
+    background: #23ff2a;
 }
 
 #tai-map-tree {

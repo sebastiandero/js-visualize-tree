@@ -5,7 +5,7 @@ const tree_chart_conf = {
             collapsable: true
         },
         connectors: {
-            type: 'step'
+            type: 'straight'
         },
         animation: {
             nodeAnimation: "easeOutCubic",
