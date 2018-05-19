@@ -12,7 +12,8 @@
 </head>
 <body>
 <!--[if lte IE 9]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a
-    href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p><![endif]-->
+        href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
 
 
 <div class="chart" id="OrganiseChart-simple">
@@ -29,7 +30,14 @@
 <script type="text/javascript" src="data/data.js"></script>
 <script type="text/javascript">
 
-    let tree_chart = new Treant(data);
+    var tree_chart_conf = {
+        "chart": {
+            "container": "#OrganiseChart-simple"
+        },
+        "nodeStructure": data
+    }
+
+    let tree_chart = new Treant(tree_chart_conf);
 </script>
 <script src="js/main.js"></script>
 </body>
