@@ -5,7 +5,11 @@ const tree_chart_conf = {
             collapsable: true
         },
         connectors: {
-            type: 'straight'
+            type: 'curve',
+            style: {
+                'stroke-width': 3,
+                stroke: '#ffffff'
+            }
         },
         animation: {
             nodeAnimation: "easeOutCubic",
@@ -16,7 +20,26 @@ const tree_chart_conf = {
     },
     nodeStructure: data
 }
-
+let tree_chart
 $(function () {
-    let tree_chart = new Treant(tree_chart_conf);
+    tree_chart = new Treant(tree_chart_conf);
+
+    $('.node .node-title').each(function () {
+
+        if ($(this).text().match(/\|A:1/)) {
+            $(this).parent().addClass("node-type-a1")
+        } else if ($(this).text().match(/\|A:2/)) {
+            $(this).parent().addClass("node-type-a2")
+        } else if ($(this).text().match(/\|A:[0-9]+\|/)) {
+            $(this).parent().addClass("node-type-a0")
+        }
+
+        if ($(this).text().match(/^ta/)) {
+            $(this).parent().addClass("node-type-ta")
+        } else if ($(this).text().match(/^ca/)) {
+            $(this).parent().addClass("node-type-ca")
+        } else if ($(this).text().match(/^a/)) {
+            $(this).parent().addClass("node-type-a")
+        }
+    })
 });

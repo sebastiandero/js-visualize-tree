@@ -98,7 +98,7 @@ textarea {
 
 html {
     color: #222;
-    font-size: 1.5em;
+    font-size: 1em;
     line-height: 1.4;
     font-family: monospace;
     height: 100%;
@@ -111,14 +111,67 @@ body {
 }
 
 .node {
-    background: #d4d4d4;
+    background: #ffffff;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
 
     padding: 0 10px;
-    border: #000000 solid 1px;
+    border: #000000 solid 6px;
     border-collapse: collapse;
+
+    min-width: 171px;
+    min-height: 220px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.node-title {
+    font-size: 1.5em;
+}
+
+.legend {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.36);
+    border-bottom-right-radius: 10px;
+    padding: 0 10px;
+}
+
+.legend > p {
+    border: #000000 solid medium;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background: #ffffff;
+    padding: 2px;
+}
+
+.node-type-a1 {
+    background: #3C989E !important;
+}
+
+.node-type-a2 {
+    background: #F57A82 !important;
+}
+
+.node-type-a0 {
+    background: #FFEBCD !important;
+}
+
+.node-type-ta {
+    border-color: #000000 !important;
+}
+
+.node-type-a {
+    border-color: rgba(0, 0, 0, 0) !important;
+}
+
+.node-type-ca {
+    border-color: #FFEBCD !important;
 }
 
 .collapse-switch {
@@ -127,27 +180,28 @@ body {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    border-collapse: collapse;
     margin: 5px;
+    border-collapse: collapse;
     -webkit-transition: background-color 0.3s ease-out;
     -moz-transition: background-color 0.3s ease-out;
     -o-transition: background-color 0.3s ease-out;
     transition: background-color 0.3s ease-out;
 }
 
-.Treant .collapsed .collapse-switch{
+.Treant .collapsed .collapse-switch {
     background: #ff6d5e;
 }
 
-.Treant .collapse-switch{
+.Treant .collapse-switch {
     background: #23ff2a;
 }
 
 #tai-map-tree {
-    background-color: #c2ffad;
-    min-height: 100%;
-    min-width: 100%;
+    background-color: #6f6f6f;
+    height: 100%;
+    width: 100%;
 }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
