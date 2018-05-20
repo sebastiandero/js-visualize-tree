@@ -26,12 +26,12 @@ $(function () {
 
     $('.node .node-title').each(function () {
 
-        if ($(this).text().match(/\|A:1/)) {
+        if ($(this).text().match(/\|A:CHECK/)) {
             $(this).parent().addClass("node-type-a1")
-        } else if ($(this).text().match(/\|A:2/)) {
-            $(this).parent().addClass("node-type-a2")
-        } else if ($(this).text().match(/\|A:[0-9]+\|/)) {
+        } else if ($(this).text().match(/\|A:FOLD/)) {
             $(this).parent().addClass("node-type-a0")
+        } else if ($(this).text().match(/\|A:R[0-9]+\|/)) {
+            $(this).parent().addClass("node-type-a2")
         }
 
         if ($(this).text().match(/^ta/)) {
