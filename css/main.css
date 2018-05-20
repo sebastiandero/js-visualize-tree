@@ -126,6 +126,12 @@ body {
     line-height: 1;
 }
 
+.node > .node-name {
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
+}
+
 .node-title {
     font-size: 1.5em;
 }

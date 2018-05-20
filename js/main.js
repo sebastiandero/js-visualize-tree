@@ -26,14 +26,19 @@ $(function () {
 
     $('.node .node-title').each(function () {
 
-        if ($(this).text().match(/\|A:CHECK/)) {
-            $(this).parent().addClass("node-type-a1")
-        } else if ($(this).text().match(/\|A:FOLD/)) {
-            $(this).parent().addClass("node-type-a0")
-        } else if ($(this).text().match(/\|A:R[0-9]+\|/)) {
-            $(this).parent().addClass("node-type-a2")
+        if ($(this).text().match(/Pnone: none/)) {
+            $(this).text("Root");
         }
 
+        if ($(this).text().match(/: CHECK/)) {
+            $(this).parent().addClass("node-type-a1")
+        } else if ($(this).text().match(/: FOLD/)) {
+            $(this).parent().addClass("node-type-a0")
+        } else if ($(this).text().match(/: R[0-9]+/)) {
+            $(this).parent().addClass("node-type-a2")
+        }
+    })
+    $('.node .node-name').each(function () {
         if ($(this).text().match(/^ta/)) {
             $(this).parent().addClass("node-type-ta")
         } else if ($(this).text().match(/^ca/)) {
