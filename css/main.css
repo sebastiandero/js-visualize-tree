@@ -156,6 +156,13 @@ body {
     padding: 2px;
 }
 
+#loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+}
+
 .node-type-a1 {
     background: #3C989E !important;
 }

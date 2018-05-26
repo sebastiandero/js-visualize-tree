@@ -24,27 +24,25 @@ let tree_chart
 $(function () {
     tree_chart = new Treant(tree_chart_conf);
 
-    $('.node .node-title').each(function () {
+    $('#loading').toggle();
 
-        if ($(this).text().match(/Pnone: none/)) {
-            $(this).text("Root");
+    $('.node').each(function () {
+        if ($(this).find('.node-title').text().match(/PNone: None/)) {
+            $(this).find('.node-title').text("Root");
+        } else if ($(this).find('.node-title').text().match(/: CHECK/)) {
+            $(this).addClass("node-type-a1")
+        } else if ($(this).find('.node-title').text().match(/: FOLD/)) {
+            $(this).addClass("node-type-a0")
+        } else if ($(this).find('.node-title').text().match(/: R[0-9]+/)) {
+            $(this).addClass("node-type-a2")
         }
 
-        if ($(this).text().match(/: CHECK/)) {
-            $(this).parent().addClass("node-type-a1")
-        } else if ($(this).text().match(/: FOLD/)) {
-            $(this).parent().addClass("node-type-a0")
-        } else if ($(this).text().match(/: R[0-9]+/)) {
-            $(this).parent().addClass("node-type-a2")
-        }
-    })
-    $('.node .node-name').each(function () {
-        if ($(this).text().match(/^ta/)) {
-            $(this).parent().addClass("node-type-ta")
-        } else if ($(this).text().match(/^ca/)) {
-            $(this).parent().addClass("node-type-ca")
-        } else if ($(this).text().match(/^a/)) {
-            $(this).parent().addClass("node-type-a")
+        if ($(this).find('.node-node-type').text() === "2") {
+            $(this).addClass("node-type-ta")
+        } else if ($(this).find('.node-name').text().match(/^ChanceNode/)) {
+            $(this).addClass("node-type-ca")
+        } else if ($(this).find('.node-name').text().match(/^ActionNode/)) {
+            $(this).addClass("node-type-a")
         }
     })
 });
